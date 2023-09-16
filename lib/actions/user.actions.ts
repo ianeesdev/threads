@@ -100,7 +100,7 @@ export async function fetchUsers({
   searchString?: string;
   pageNumber?: number;
   pageSize?: number;
-  sortBy?: SortOrder;
+  sortBy?: "asc" | "desc";
 }) {
   try {
     connectToDB();
