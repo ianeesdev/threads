@@ -1,6 +1,6 @@
 "use server";
 
-import { FilterQuery, SortOrder } from "mongoose";
+import { FilterQuery } from "mongoose";
 
 import Community from "../models/community.model";
 import Thread from "../models/thread.model";
@@ -112,7 +112,7 @@ export async function fetchCommunities({
   searchString?: string;
   pageNumber?: number;
   pageSize?: number;
-  sortBy?: SortOrder;
+  sortBy?: "asc" | "desc";
 }) {
   try {
     connectToDB();
@@ -121,7 +121,6 @@ export async function fetchCommunities({
     const skipAmount = (pageNumber - 1) * pageSize;
 
     // Create a case-insensitive regular expression for the provided search string.
-
     const regex = new RegExp(searchString, "i");
 
     // Create an initial query object to filter communities.
@@ -175,7 +174,6 @@ export async function addMemberToCommunity(
     }
 
     // Find the user by their unique id
-
     const user = await User.findOne({ id: memberId });
 
     if (!user) {
