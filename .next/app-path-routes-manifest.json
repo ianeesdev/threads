@@ -1,0 +1,16 @@
+{
+  "/favicon.ico/route": "/favicon.ico",
+  "/api/uploadthing/route": "/api/uploadthing",
+  "/(root)/page": "/",
+  "/(root)/activity/page": "/activity",
+  "/(root)/communities/page": "/communities",
+  "/(root)/search/page": "/search",
+  "/(root)/create-thread/page": "/create-thread",
+  "/(auth)/onboarding/page": "/onboarding",
+  "/api/webhook/clerk/route": "/api/webhook/clerk",
+  "/(auth)/sign-in/[[...sign-in]]/page": "/sign-in/[[...sign-in]]",
+  "/(root)/communities/[id]/page": "/communities/[id]",
+  "/(auth)/sign-up/[[...sign-up]]/page": "/sign-up/[[...sign-up]]",
+  "/(root)/profile/[id]/page": "/profile/[id]",
+  "/(root)/thread/[id]/page": "/thread/[id]"
+}
